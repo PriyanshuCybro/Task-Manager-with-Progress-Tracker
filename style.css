@@ -227,8 +227,6 @@ footer {
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-/* ye planet background hai */
-
 
 #parallax-space-bg {
   position: fixed; top: 0; left: 0;
@@ -241,7 +239,6 @@ footer {
   animation: bgGradientShift 90s ease infinite;
 }
 
-/* Background Gradient Shift */
 @keyframes bgGradientShift {
   0%, 100% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
@@ -264,14 +261,13 @@ footer {
   animation-delay: 60s;
 }
 
-/* Nebula Movement */
+
 @keyframes nebulaMove {
   0% {transform: translate(0,0) scale(1);}
   50% {transform: translate(40px, 20px) scale(1.1);}
   100% {transform: translate(0,0) scale(1);}
 }
 
-/* Stars layers */
 .stars {
   position: absolute;
   top: 0; left: 0;
@@ -300,7 +296,7 @@ footer {
   100% {background-position: 1000px 1000px;}
 }
 
-/* Sun */
+
 .sun {
   position: absolute;
   top: 50%; left: 50%;
@@ -319,7 +315,6 @@ footer {
   50% {transform: translate(-50%, -50%) scale(1.08);}
 }
 
-/* Orbits */
 .orbit {
   position: absolute;
   top: 50%; left: 50%;
@@ -341,7 +336,6 @@ footer {
 .orbit7 {width: 440px; height: 440px; margin: -220px 0 0 -220px; animation: spin 70s linear infinite;}
 .orbit8 {width: 490px; height: 490px; margin: -245px 0 0 -245px; animation: spinReverse 85s linear infinite;}
 
-/* Planets */
 .planet {
   position: absolute;
   top: 50%; left: 0;
@@ -361,7 +355,6 @@ footer {
 .planet7 {background: #6bfff1; width: 32px; height: 32px; animation-delay: 9.5s;}
 .planet8 {background: #ff6bd7; width: 24px; height: 24px; animation-delay: 10.6s;}
 
-/* Animations */
 @keyframes spin { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
 @keyframes spinReverse { from {transform: rotate(360deg);} to {transform: rotate(0deg);} }
 @keyframes planetPulse {
@@ -369,7 +362,6 @@ footer {
   50% {transform: translateY(-50%) scale(1.15);}
 }
 
-/* Mobile devices ke liye */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
@@ -397,7 +389,7 @@ footer {
 
 
 
-/* Background 3d effect */
+
 
 #background-3d {
   position: fixed;
@@ -434,7 +426,6 @@ footer {
   100% { transform: translate3d(10px, -25px, 5px) rotateZ(360deg);}
 }
 
-/* Celebration */
 @keyframes explode {
   to {
     opacity: 0;
@@ -443,7 +434,7 @@ footer {
 }
 
 
-/* Fireworks main container */
+
 .firework-container {
   position: fixed;
   top: 0; 
@@ -455,16 +446,14 @@ footer {
   z-index: 9999;
 }
 
-/* Particles style */
 .firework-particle {
   position: absolute;
   border-radius: 50%;
   opacity: 1;
   will-change: transform, opacity;
-  /* Animation properties will be dynamically added by JS */
+  
 }
 
-/* Animation Keyframes - explode */
 @keyframes explode {
   to {
     opacity: 0;
@@ -499,3 +488,4 @@ footer {
     font-size: 0.98rem;
   }
 }
+
