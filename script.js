@@ -20,7 +20,7 @@ function renderTasks() {
       <button class="delete-btn" onclick="deleteTask(${idx})">Delete</button>
     `;
 
-    // Drag & drop handlers
+  
     li.addEventListener('dragstart', (e) => {
       e.dataTransfer.setData('text/plain', idx);
     });
@@ -98,7 +98,7 @@ function updateProgress(completed, total) {
   progressText.innerText = percent + "% Completed";
 }
 
-// Dark/Light Mode toggle
+
 modeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   if(document.body.classList.contains('dark')) modeToggle.innerText = "Light Mode";
@@ -177,7 +177,7 @@ function strongCelebrate() {
   }
 }
 
-// Background 3d effect
+
 
 const BACKGROUND = document.getElementById('background-3d');
 
@@ -207,8 +207,6 @@ for(let i = 0; i < 20; i++) {
   createBubble();
 }
 
-// backgroun planet ke liye
-
 const bg = document.getElementById('parallax-space-bg');
 
 window.addEventListener('mousemove', (e) => {
@@ -218,7 +216,7 @@ window.addEventListener('mousemove', (e) => {
   let offsetX = (e.clientX - centerX) / centerX; // range: -1 to 1
   let offsetY = (e.clientY - centerY) / centerY;
 
-  // Planets parallax movement
+
   const orbits = document.querySelectorAll('#parallax-space-bg .orbit');
   orbits.forEach((orbit, i) => {
     let factor = (i + 1) * 3; // farthest moves slowest
@@ -228,23 +226,17 @@ window.addEventListener('mousemove', (e) => {
     orbit.style.transform = `translate3d(${dx}px, ${dy}px, 0) rotate(${orbit.style.animationName === 'spinReverse' ? -performance.now()/100 : performance.now()/100}deg)`;
   });
 
-  // Nebula slow movement
+  
   const nebulas = document.querySelectorAll('.nebula');
   nebulas.forEach((nebula, i) => {
     let nfactor = (i+1)*5;
     nebula.style.transform = `translate3d(${offsetX * nfactor * 0.3}px, ${offsetY * nfactor * 0.3}px, 0)`;
   });
 
-  // Sun parallax effect
   const sun = document.querySelector('.sun');
   sun.style.transform = `translate3d(calc(50% + ${offsetX * 15}px), calc(50% + ${offsetY * 15}px), 0) scale(${1 + Math.sin(performance.now()/1000) * 0.07})`;
 });
 
-
-
-
-
-// Inspirational quotes
 const quotes = [
   "Stay focused and never give up!",
   "One step at a time is progress.",
@@ -265,3 +257,4 @@ window.onload = () => {
 };
 
 addBtn.addEventListener('click', addTask);
+
